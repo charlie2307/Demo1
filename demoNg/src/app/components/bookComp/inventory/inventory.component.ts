@@ -2,12 +2,14 @@ import { Component, Input } from '@angular/core';
 import { SidebarComponent } from '../../../sidebar/sidebar.component';
 import { Book } from '../../../models/book.model';
 import { BookServiceService } from '../../../services/book-service.service';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-inventory',
-  imports: [],
+  imports: [RouterModule,RouterOutlet],
   templateUrl: './inventory.component.html',
-  styleUrl: './inventory.component.css'
+  styleUrl: './inventory.component.css',
+  providers: [BookServiceService]
 })
 export class InventoryComponent {
 
