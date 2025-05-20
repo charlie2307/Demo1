@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { InventoryComponent } from '../../bookComp/inventory/inventory.component';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { UserSidebarComponent } from '../user-sidebar/user-sidebar.component';
+import { SidebarComponent } from '../../../sidebar/sidebar.component';
 
 
 @Component({
   selector: 'app-user',
-  imports: [InventoryComponent,RouterOutlet,RouterModule,UserSidebarComponent],
+  imports: [InventoryComponent,RouterOutlet,RouterModule,UserSidebarComponent,SidebarComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
