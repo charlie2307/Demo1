@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { InventoryComponent } from '../components/bookComp/inventory/inventory.component';
 
 @Component({
   selector: 'app-sidebar',

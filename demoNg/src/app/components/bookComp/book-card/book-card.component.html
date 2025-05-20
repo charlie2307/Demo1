@@ -1,0 +1,24 @@
+<!-- book-card.component.html -->
+<div class="book-card">
+  <div class="book-image-container">
+    <img [src]="book.imageUrl || 'assets/default-book-cover.jpg'" 
+         alt="{{book.bookName}}" 
+         class="book-image"
+         onerror="this.src='assets/default-book-cover.jpg'">
+    <div class="stock-badge" [ngClass]="{
+      'in-stock': book.quantity > 5,
+      'low-stock': book.quantity <= 5 && book.quantity > 0,
+      'out-of-stock': book.quantity === 0
+    }">
+      {{ book.quantity > 0 ? (book.quantity > 5 ? 'In Stock' : 'Low Stock') : 'Out of Stock' }}
+    </div>
+  </div>
+  
+  <div class="book-details">
+    <h3 class="book-bookName">{{book.bookName}}</h3>
+    <p class="book-author">{{book.authorName}}</p>
+    <div class="book-meta">
+      <span class="book-genre">{{book.genre}}</span>
+    </div>
+  </div>
+</div>
