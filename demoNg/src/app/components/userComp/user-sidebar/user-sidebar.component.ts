@@ -3,7 +3,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-user-sidebar',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './user-sidebar.component.html',
   styleUrl: './user-sidebar.component.css'
 })

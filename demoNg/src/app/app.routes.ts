@@ -13,5 +13,5 @@ export const routes: Routes = [
     { path: "manager",component:ManagerComponent},
     { path: "admin",component:AdminComponent},
     { path: "inventory",component:InventoryComponent},
-    { path: "pendingOrders", component:PendingOrdersComponent}
+    { path: "pendingOrders", component:PendingOrdersComponent},
 ];
