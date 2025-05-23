@@ -21,4 +21,16 @@ export class BookServiceService {
       responseType: 'text',
     });
   }
+
+  private bookUrl="https://localhost:7252/api/Books";
+  
+
+  getBooks(): Observable<any[]> {
+    return this.http.get<any[]>(this.bookUrl + "/ViewAllBooks");
+  }
+
+  private uploadUrl="https://localhost:7252/api/Books/AddBook";
+  uploadBook(bookData:any):Observable<any[]>{
+    return this.http.post<any[]>(this.uploadUrl, bookData);
+  }
 }
