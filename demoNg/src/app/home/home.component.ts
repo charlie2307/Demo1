@@ -5,6 +5,17 @@ import { CommonModule } from '@angular/common';
 import { BookServiceService } from '../services/book-service.service';
 import { CardService } from '../services/card.service';
 
+declare var bootstrap: any; // Required for Bootstrap JS methods
+interface BookItem {
+  authorName: string;
+  base64Image: string;
+  bookId: string;
+  bookName: string;
+  genre: string;
+  isbn: string;
+  quantity: string;
+};
+
 @Component({
   selector: 'app-home',
   imports: [HeaderComponent,RouterModule,CommonModule],
@@ -32,12 +43,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     const carouselElement = document.getElementById('bookCarousel');
 
-    // if (carouselElement) {
-    //   const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement, {
-    //     interval: 4000,
-    //     ride: 'carousel'
-    //   });
-    // }
+    if (carouselElement) {
+      const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement, {
+        interval: 4000,
+        ride: 'carousel'
+      });
+    }
   }
 
   addToCart(item: any) {
