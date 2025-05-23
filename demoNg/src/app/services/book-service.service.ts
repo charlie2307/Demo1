@@ -21,5 +21,4 @@ export class BookServiceService {
       responseType: 'text',
     });
   }
-
 }
